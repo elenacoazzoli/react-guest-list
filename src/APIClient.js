@@ -32,3 +32,16 @@ export async function deleteGuestFromAPI(deletedGuestID) {
   const deletedGuest = await response.json();
   return deletedGuest;
 }
+
+// Creating async function for API PATCH method
+export async function updateGuestFromAPI(updatedGuestID, attending) {
+  const response = await fetch(`${guestApiUrl}/${updatedGuestID}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ attending: attending }),
+  });
+  const updatedGuest = await response.json();
+  return updatedGuest;
+}
