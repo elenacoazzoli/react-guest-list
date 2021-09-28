@@ -1,4 +1,4 @@
-const guestApiUrl = 'http://localhost:5000';
+const guestApiUrl = 'https://react-guest-list-ec.herokuapp.com';
 
 // API GET method to fetch all guests. Returns allGuests
 export async function getAllGuestsfromAPI() {
